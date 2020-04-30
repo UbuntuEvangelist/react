@@ -2,9 +2,13 @@
   "name": "systemjs-builder-test",
   "private": true,
   "dependencies": {
-    "systemjs-builder": "^0.15.34"
+    "systemjs-builder": "^0.15.34",
+    "snyk": "^1.316.1"
   },
   "scripts": {
-    "build": "rm -f output.js && node build.js"
-  }
+    "build": "rm -f output.js && node build.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
